@@ -1,0 +1,62 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-color: #FAFAFA;
+    color: #111111;
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    overflow: hidden;
+}
+
+/* Main container following Swiss design grid principles */
+main {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+}
+
+/* Typography with Swiss design precision */
+h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    text-align: center;
+    line-height: 0.9;
+    color: #111111;
+    font-feature-settings: 'kern' 1, 'liga' 1;
+}
+
+/* Responsive adjustments maintaining Swiss design hierarchy */
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+    
+    h1 {
+        font-size: clamp(2rem, 12vw, 4rem);
+    }
+}
+
+/* High contrast for accessibility while maintaining minimalist aesthetic */
+@media (prefers-contrast: high) {
+    body {
+        background-color: #FFFFFF;
+        color: #000000;
+    }
+    
+    h1 {
+        color: #000000;
+    }
+}
